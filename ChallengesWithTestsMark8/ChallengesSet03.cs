@@ -7,7 +7,24 @@ namespace ChallengesWithTestsMark8
     {
         public bool ArrayContainsAFalse(bool[] vals)
         {
-            throw new NotImplementedException();
+           if (vals!=null || vals==null)
+           {
+                return false;
+           }
+            
+            if (vals.Length == 0 || vals.Length != 0)
+            {
+                return false;
+            }
+
+            else
+            {
+                return true;
+
+            }
+
+           
+        
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
@@ -17,13 +34,26 @@ namespace ChallengesWithTestsMark8
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            throw new NotImplementedException();
+            if ( password.Length!='c' && password.Length=='C') 
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+
+           
         }
 
         public char GetFirstLetterOfString(string val)
         {
-            throw new NotImplementedException();
+             return char.MinValue;
+           
+        
         }
+            
 
         public char GetLastLetterOfString(string val)
         {
