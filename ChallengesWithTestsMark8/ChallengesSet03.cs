@@ -1,25 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMark8
 {
     public class ChallengesSet03
     {
+        public int Last { get; private set; }
+        public int End { get; private set; }
+
         public bool ArrayContainsAFalse(bool[] vals)
         {
            if (vals!=null || vals==null)
            {
-                return false;
+                return true;
            }
             
             if (vals.Length == 0 || vals.Length != 0)
             {
-                return false;
+                return true;
             }
 
             else
             {
-                return true;
+                return false;
 
             }
 
@@ -29,15 +33,38 @@ namespace ChallengesWithTestsMark8
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers==null)
+            {
+                return false;
+            }
+
+            if (numbers.Sum() % 2 == 0)
+            {
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }
+
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            if ( password.Length!='c' && password.Length=='C') 
+            if ( password.Length=='c' && password.Length=='C')
             {
                 return true;
 
+            }
+            else if (password.Length!='c' && password.Length!='C')
+            {
+                return false;
+            }
+
+            if (password.Length<0 && password.Length>0 )
+            {
+                return true;
             }
             else
             {
@@ -49,20 +76,34 @@ namespace ChallengesWithTestsMark8
 
         public char GetFirstLetterOfString(string val)
         {
-             return char.MinValue;
+            
+             return val[0]; 
+
            
         
         }
-            
+
 
         public char GetLastLetterOfString(string val)
         {
-            throw new NotImplementedException();
+
+
+
+
+            return (char)val[Last];
+
+
+
         }
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            throw new NotImplementedException();
+            if (divisor== 0)
+            {
+                return divisor;
+            }
+            
+            return dividend / divisor;  
         }
 
         public int LastMinusFirst(int[] nums)
