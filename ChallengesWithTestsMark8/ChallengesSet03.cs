@@ -8,22 +8,20 @@ namespace ChallengesWithTestsMark8
     {
         public int Last { get; private set; }
         public int End { get; private set; }
+        public object ToUpper { get; private set; }
 
         public bool ArrayContainsAFalse(bool[] vals)
         {
-           if (vals!=null || vals==null)
-           {
-                return true;
-           }
-            
-            if (vals.Length == 0 || vals.Length != 0)
+
+
+            if (vals.Length == 0 && vals.Length != 0)
             {
                 return true;
             }
 
             else
             {
-                return false;
+                return true;
 
             }
 
@@ -89,8 +87,7 @@ namespace ChallengesWithTestsMark8
 
 
 
-
-            return (char)val[Last];
+            return val[val.Length-1];
 
 
 
@@ -108,7 +105,8 @@ namespace ChallengesWithTestsMark8
 
         public int LastMinusFirst(int[] nums)
         {
-            throw new NotImplementedException();
+            return nums.Length - 1+ nums[1];
+        
         }
 
         public int[] GetOddsBelow100()
@@ -118,7 +116,8 @@ namespace ChallengesWithTestsMark8
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            throw new NotImplementedException();
+            
+
         }
     }
 }

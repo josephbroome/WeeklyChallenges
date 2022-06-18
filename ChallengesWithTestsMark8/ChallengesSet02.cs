@@ -71,8 +71,8 @@ namespace ChallengesWithTestsMark8
         {
 
 
-
-            throw new NotImplementedException();
+                
+           return numbers.Sum(x => x);
 
 
 
@@ -162,7 +162,7 @@ namespace ChallengesWithTestsMark8
         public long CountOfPositiveOddsBelowNumber(long number)
         {
             long sum = 0;
-            for(long i=0; i< number; i++ )
+            for(long i=0; number>0; i++ )
             {
                return sum += number;
             }
