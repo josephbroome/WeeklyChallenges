@@ -70,9 +70,18 @@ namespace ChallengesWithTestsMark8
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
 
+            if (numbers == null)
+            {
+                return 0;
+            }
 
-                
-           return numbers.Sum(x => x);
+            if (numbers.Count() == 0)
+            {
+                return 0;
+            }
+
+            return numbers.Min() + numbers.Max() ;
+           
 
 
 
@@ -161,13 +170,36 @@ namespace ChallengesWithTestsMark8
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            long sum = 0;
-            for(long i=0; number>0; i++ )
+            var count = 0;
+
+            if(number==1 || number <0)
             {
-               return sum += number;
+                return 0;
             }
-          
-            return 0;   
+
+            for (long i = number; i > 0; i--)
+            {
+                if( i %2 ==0)
+                {
+                    count++;
+                }
+            
+            
+            
+            }
+
+            return count;
+
+          if(number <=0)
+            {
+                return 0;
+            }
+
+          else
+            {
+                return number / 2;
+            }
+
         }
     }
 }
